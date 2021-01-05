@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/yTV"
+        android:text="y = "
+        android:textSize="16pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sendersPublicKeyMemberTV"
+        android:text="Sender's public key is:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sendersPublicKeyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="@+id/sendersPublicKeyMemberTV"
+        app:layout_constraintStart_toStartOf="@+id/sendersPublicKeyMemberTV"
+        app:layout_constraintTop_toBottomOf="@+id/sendersPublicKeyMemberTV" />
+
+    <TextView
+        android:id="@+id/recipientsPublicKeyMemberTV"
+        android:text="Recipient's public key is:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="12pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendersPublicKeyTV" />
+
+    <TextView
+        android:id="@+id/recipientsPublicKeyTV"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="12pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipientsPublicKeyMemberTV" />
+
+    <TextView
+        android:id="@+id/secretKeyMemberTV"
+        android:text="Shared secret key is:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="12pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipientsPublicKeyTV" />
+
+    <TextView
+        android:id="@+id/secretKeyTV"
+        android:text=""
+        android:textSize="12pt"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secretKeyMemberTV" />
+
+    <Button
+        android:id="@+id/backBTN"
+        android:text="back to sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secretKeyTV"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/infoFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipientActivity">
+
+
+    <TextView
+        android:id="@+id/receivedDataTV"
+        android:text="Received data:"
+        android:textSize="10pt"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:text="N = "
+        android:textSize="14pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receivedDataTV" />
+
+    <TextView
+        android:id="@+id/eTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:text="e = "
+        android:textSize="14pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receivedDataTV" />
+
+    <TextView
+        android:id="@+id/messageMemberTV"
+        android:text="Your message:"
+        android:textSize="10pt"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nTV" />
+
+    <EditText
+        android:id="@+id/messageET"
+        android:hint="Your message here..."
+        android:layout_marginTop="15dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageMemberTV" />
+
+    <Button
+        android:id="@+id/sendMessageBTN"
+        android:text="send back"
+        android:textSize="9pt"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageET" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/infoFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

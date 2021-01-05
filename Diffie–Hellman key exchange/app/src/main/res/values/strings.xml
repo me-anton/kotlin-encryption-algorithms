@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">lab8</string>
+    <string name="title_activity_recipient">RecipientActivity</string>
+</resources>

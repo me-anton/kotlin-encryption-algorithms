@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/pTV"
+        android:text="p = "
+        android:textSize="16pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pET"
+        android:inputType="number"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/pTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gTV"
+        android:text="g = "
+        android:textSize="16pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/gET"
+        android:inputType="number"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toEndOf="@+id/pTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/xTV"
+        android:text=""
+        android:textSize="15pt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gET"
+        app:layout_constraintTop_toTopOf="@+id/gET" />
+
+    <Button
+        android:id="@+id/pgRandomizeBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="randomize"
+        android:textSize="9pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pET"
+        app:layout_constraintTop_toTopOf="@+id/pET" />
+
+    <Button
+        android:id="@+id/makePublicKeyBTN"
+        android:text="make public key"
+        android:textSize="9pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gET" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/senderPublicKeyTV"
+        android:text=""
+        android:textSize="15pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makePublicKeyBTN" />
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/sendPublicKeyBTN"
+        android:text="send public key"
+        android:textSize="9pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senderPublicKeyTV" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/secretKeyMemberTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Secret key is:"
+        android:textSize="15pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendPublicKeyBTN" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/secretKeyTV"
+        android:text=""
+        android:textSize="15pt"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secretKeyMemberTV" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/infoFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

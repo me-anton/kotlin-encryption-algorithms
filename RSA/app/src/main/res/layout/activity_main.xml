@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/pTV"
+        android:text="p = "
+        android:textSize="14pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pET"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/pTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/qTV"
+        android:text="q = "
+        android:textSize="14pt"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/pTV"
+        app:layout_constraintStart_toStartOf="@+id/pTV"
+        app:layout_constraintTop_toBottomOf="@+id/pTV" />
+
+    <EditText
+        android:id="@+id/qET"
+        android:inputType="number"
+        android:layout_marginTop="15dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/qTV"
+        app:layout_constraintTop_toBottomOf="@+id/pET" />
+
+    <TextView
+        android:id="@+id/eTV"
+        android:text="e = "
+        android:textSize="15pt"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/qTV"
+        app:layout_constraintStart_toStartOf="@+id/qTV"
+        app:layout_constraintTop_toBottomOf="@+id/qTV" />
+
+    <EditText
+        android:id="@+id/eET"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@id/eTV"
+        app:layout_constraintTop_toBottomOf="@+id/qET" />
+
+    <TextView
+        android:id="@+id/nTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n = "
+        android:textSize="15pt"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pET"
+        app:layout_constraintTop_toTopOf="@+id/pTV" />
+
+    <TextView
+        android:id="@+id/phiTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="φ = "
+        android:textSize="14pt"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/nTV"
+        app:layout_constraintStart_toStartOf="@+id/nTV"
+        app:layout_constraintTop_toTopOf="@+id/qTV" />
+
+    <TextView
+        android:id="@+id/dTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d = "
+        android:textSize="15pt"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/phiTV"
+        app:layout_constraintStart_toStartOf="@+id/phiTV"
+        app:layout_constraintTop_toTopOf="@+id/eTV" />
+
+    <Button
+        android:id="@+id/randomizeBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="randomize"
+        android:textSize="9pt"
+        app:layout_constraintEnd_toEndOf="@+id/eET"
+        app:layout_constraintHorizontal_bias="0.200"
+        app:layout_constraintStart_toStartOf="@+id/eTV"
+        app:layout_constraintTop_toBottomOf="@+id/eET" />
+
+    <Button
+        android:id="@+id/sendPublicKeyBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send keys"
+        android:textSize="9pt"
+        app:layout_constraintEnd_toEndOf="@+id/nTV"
+        app:layout_constraintStart_toStartOf="@+id/nTV"
+        app:layout_constraintTop_toTopOf="@+id/randomizeBTN" />
+
+    <TextView
+        android:visibility="invisible"
+        android:text="Secret message:"
+        android:textSize="10pt"
+        android:layout_marginTop="50dp"
+        android:id="@+id/messageMemberTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomizeBTN" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/messageTV"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="10pt"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageMemberTV" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/infoFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

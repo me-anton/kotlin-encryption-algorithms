@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/formula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/formula"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        />
+
+    <TextView
+        android:id="@+id/xTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/textTopMargin"
+        android:text="x = "
+        app:layout_constraintHorizontal_bias="0.2"
+        android:textSize="@dimen/textSizePrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/yTV"
+        app:layout_constraintTop_toBottomOf="@id/formula" />
+
+    <EditText
+        android:id="@+id/xET"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/valuesTopMargin"
+        android:text="-0.02235"
+        android:textSize="@dimen/valuesSizePrimary"
+        app:layout_constraintLeft_toRightOf="@id/xTV"
+        app:layout_constraintTop_toBottomOf="@id/formula" />
+
+    <TextView
+        android:id="@+id/yTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="y = "
+        app:layout_constraintHorizontal_bias="@integer/valuesHorizontalBias"
+        android:textSize="@dimen/textSizePrimary"
+        android:layout_marginTop="@dimen/textTopMargin"
+        app:layout_constraintTop_toBottomOf="@id/formula"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <EditText
+        android:id="@+id/yET"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/valuesTopMargin"
+        android:text="2.23"
+        android:textSize="@dimen/valuesSizePrimary"
+        app:layout_constraintLeft_toRightOf="@id/yTV"
+        app:layout_constraintTop_toBottomOf="@id/formula" />
+
+    <TextView
+        android:id="@+id/zTV"
+        android:text="z = "
+        android:textSize="@dimen/textSizePrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="@integer/valuesHorizontalBias"
+        android:layout_marginTop="@dimen/textTopMargin"
+        app:layout_constraintTop_toBottomOf="@id/formula"
+        app:layout_constraintLeft_toRightOf="@id/yTV"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <EditText
+        android:id="@+id/zET"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/valuesTopMargin"
+        android:text="15.221"
+        android:textSize="@dimen/valuesSizePrimary"
+        app:layout_constraintLeft_toRightOf="@id/zTV"
+        app:layout_constraintTop_toBottomOf="@id/formula" />
+
+    <TextView
+        android:id="@+id/phiTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/textTopMargin"
+        android:layout_marginLeft="130dp"
+        android:text="φ = "
+        android:textSize="@dimen/textSizePrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/xET" />
+
+    <TextView
+        android:id="@+id/resultTV"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="39.374"
+        app:layout_constraintStart_toEndOf="@+id/phiTV"
+        app:layout_constraintTop_toBottomOf="@+id/xET" />
+
+    <Button
+        android:id="@+id/submit"
+        android:text="Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/xET"
+        app:layout_constraintRight_toLeftOf="@id/phiTV"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
